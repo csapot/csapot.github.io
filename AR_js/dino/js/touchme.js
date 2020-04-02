@@ -13,9 +13,10 @@ AFRAME.registerComponent("markerhandler",{
 		 soundentity = document.querySelector('[sound]');
 
 	     dino = document.querySelector('#animated-dino');
-		 dino.object3D.visible = false;
+		 dino.object3D.visible = true;
 
-		 //dino.setAttribute('animation-mixer', {clip: 'C4D Animation Take', loop: 'repeat'});
+		 dino.setAttribute('animation-mixer', {clip: 'C4D Animation Take', loop: 'repeat'});
+		 soundentity.components.sound.playSound();
 	},
 
 	tick:function() {
