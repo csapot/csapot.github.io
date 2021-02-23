@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0" />
+		<meta http-equiv="cache-control" content="max-age=0" />
+		<meta http-equiv="expires" content="0" />
+		<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+		<meta http-equiv="pragma" content="no-cache" />
+		<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+		<!-- we import arjs version without NFT but with marker 
+		+ location based support -->
+		<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	</head>
+    <body style="margin : 0px; overflow: hidden;">
+        <a-scene embedded arjs>
+            <!-- handle hiro marker -->
+            <a-marker preset='hiro'>
+                <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
+                    <!-- add a torus in a red box --> 
+                    <!-- <a-torus-knot radius='0.26' radius-tubular='0.05' -->
+                    <!-- animation="property: rotation; to:360 0 0; dur: 5000; easing: linear; loop: true"> -->
+                    <!-- </a-torus-knot> -->
+					
+					<!-- from https://aframe.io/docs/1.0.0/introduction/html-and-primitives.html -->
+					<!-- <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box> -->
+					<!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere> -->
+					<!-- <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder> -->
+					
+					<a-text value="csapot AR experience" look-at="[gps-camera]" geometry="primitive:plane" scale="150 100 50" ></a-text>
+					
+                </a-box>
+				 <!-- scale="150 100 50" -->
+				
+            </a-marker>
+
+            <!-- add a camera to the scene that renders the objects for us -->
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
+</html>
