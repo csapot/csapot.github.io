@@ -16,14 +16,14 @@
         <a-scene embedded arjs>
             <!-- handle hiro marker -->
             <a-marker preset='hiro'>
-                
+                <a-box position='0 0.5 0' material='opacity: 0.5; side: double;color:red;'>
 				<!-- <a-text value="csapot AR experience" geometry="primitive:plane" scale="1.5 1.0 0.5" ></a-text> -->
-				<a-text look-at="[gps-camera]" value="Point 1" color="yellow" rotation="0 90 0" scale="7, 7"
-            position="-2.5 4 0"
-            z-offset="3"
-            faceUser: true;>
-			</a-text>
-				
+					<a-text look-at="[gps-camera]" value="Point 1" color="yellow" rotation="0 90 0" scale="7, 7"
+						position="-2.5 4 0"
+						z-offset="3"
+						faceUser: true;>
+					</a-text>
+				</a-box>
             </a-marker>
 
             <!-- add a camera to the scene that renders the objects for us -->
