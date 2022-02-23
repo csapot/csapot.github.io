@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<!-- we import arjs version without NFT but with marker 
+	+ location based support -->
+	<script src="https://smartlab.tmit.bme.hu:4443/AR.js/aframe/build/aframe-ar.js"></script>
+	<body style="margin : 0px; overflow: hidden;">
+		<a-scene embedded arjs>
+			<!-- handle hiro marker -->
+			<a-marker preset='hiro'>
+				<!-- csapot: text not wokring on 2022 -->
+				<!-- <a-text value="Hello, World!" scale="3 2 1"></a-text> -->
+				<a-text value="csapot AR experience"  geometry="primitive:plane" scale="15 15 15" position="-0.5 0.5 -3" rotation="0 90 0"></a-text>
+			</a-marker>
+			
+			<!-- add a camera to the scene that renders the objects for us -->
+			<a-entity camera></a-entity>
+		</a-scene>
+	</body>
+</html>
